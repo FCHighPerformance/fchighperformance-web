@@ -3,7 +3,7 @@
  */
 export const site = {
   name: "FC High Performance",
-  tagline: "Old-school training. Real community.",
+  tagline: "Old-school training for every age.",
   phone: "757.778.9222",
   phoneHref: "tel:+17577789222",
   email: "info@fchighperformance.com", // TODO: confirm with owner
@@ -18,12 +18,14 @@ export const site = {
     label: "See Programs",
     href: "#programs",
   },
-  // Subtle authority — vague enough to be true, owner can sharpen later
-  // TODO with owner: replace with sharper numbers (e.g. "12+ Years", "500+ Athletes")
+  // Demographic-anchored proof points. The numbers do the talking:
+  // 40+ pulls the eye for the primary audience, 7+ for the kids hook.
+  // TODO with owner: sharpen if real numbers are available
+  // (e.g. "200+ Adult Members", "60+ Junior Boxers").
   proofPoints: [
-    { value: "10+", label: "Years Coaching" },
-    { value: "All Ages", label: "Kids 7+ and Adults" },
-    { value: "4", label: "Programs Built On Results" },
+    { value: "40+", label: "Adults Building Strength" },
+    { value: "7+", label: "Kids Learning To Box" },
+    { value: "10+ Yrs", label: "Old-School Coaching" },
   ],
   // GoHighLevel form embed — see project memory for context
   ghlForm: {

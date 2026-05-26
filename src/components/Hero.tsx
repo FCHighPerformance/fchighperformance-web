@@ -32,14 +32,14 @@ export function Hero() {
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase leading-[0.9] tracking-tight">
-            Old-school training.
+            Never too early.
             <br />
-            Real community.
+            Never too late.
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg sm:text-xl text-white/75 leading-relaxed">
-            Boxing, strength &amp; conditioning, and personal training for kids
-            and adults who want real coaching — not another gym membership.
+            Boxing, strength &amp; conditioning, and personal training for
+            kids 7+ and adults 40+ who refuse to slow down.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">

@@ -1,7 +1,8 @@
 /**
- * Program offerings. TODO with owner: confirm each program's
- * schedule and CTA destination. Pricing intentionally not shown here —
- * conversion lives at the booking form.
+ * Program offerings — ordered with the primary demographic (adults 40+)
+ * first. Kids program intentionally placed last so the adult eye doesn't
+ * scroll past their target program. TODO with owner: confirm each
+ * program's schedule and CTA destination.
  */
 export type Program = {
   slug: string;
@@ -14,17 +15,30 @@ export type Program = {
 
 export const programs: Program[] = [
   {
-    slug: "kids-boxing",
-    name: "Kids Boxing",
-    for: "Ages 7–14",
+    slug: "one-on-one",
+    name: "1-on-1 Training",
+    for: "Adults 40+",
     blurb:
-      "Large group classes that build discipline, confidence, and real boxing skill — in a community that has their back.",
+      "Personalized coaching for adults rebuilding strength, mobility, and confidence — without the cookie-cutter gym routine.",
     bullets: [
-      "Coach-led group sessions",
-      "Footwork, technique, conditioning",
-      "Sparring options as kids progress",
+      "Fitness & movement assessment",
+      "Strength & endurance review",
+      "Nutrition & lifestyle consult",
     ],
-    cta: { label: "Get Class Schedule", href: "#book" },
+    cta: { label: "Book Your First Session", href: "#book" },
+  },
+  {
+    slug: "small-group-pt",
+    name: "Small Group Personal Training",
+    for: "Adults who want coaching, not a class",
+    blurb:
+      "Personalized programming in a small-group setting. Real coach attention without 1-on-1 commitment.",
+    bullets: [
+      "4–6 athletes per session",
+      "Individual programming",
+      "Coaching on every rep",
+    ],
+    cta: { label: "Book Your First Session", href: "#book" },
   },
   {
     slug: "strength-conditioning",
@@ -40,29 +54,16 @@ export const programs: Program[] = [
     cta: { label: "Try Your First Class", href: "#book" },
   },
   {
-    slug: "small-group-pt",
-    name: "Small Group Personal Training",
-    for: "Adults who want coaching, not a class",
+    slug: "kids-boxing",
+    name: "Kids Boxing",
+    for: "Ages 7–14",
     blurb:
-      "Personalized programming in a small-group setting. Real coach attention. Real coaching, not a follow-along.",
+      "Large group classes that build discipline, confidence, and real boxing skill — in a community that has their back.",
     bullets: [
-      "4–6 athletes per session",
-      "Individual programming",
-      "Coaching on every rep",
+      "Coach-led group sessions",
+      "Footwork, technique, conditioning",
+      "Sparring options as kids progress",
     ],
-    cta: { label: "Book Your First Session", href: "#book" },
-  },
-  {
-    slug: "one-on-one",
-    name: "1-on-1 Training",
-    for: "Adults 40+",
-    blurb:
-      "A personalized program built around your body, your history, and what you actually want to do better.",
-    bullets: [
-      "Fitness & movement assessment",
-      "Strength & endurance review",
-      "Nutrition & lifestyle consult",
-    ],
-    cta: { label: "Book Your First Session", href: "#book" },
+    cta: { label: "Get Class Schedule", href: "#book" },
   },
 ];

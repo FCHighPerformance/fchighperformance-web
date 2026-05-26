@@ -12,11 +12,12 @@ export function Programs() {
             </p>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight leading-[0.95]">
-            Programs for every<br />athlete in the room.
+            One gym.<br />Every age.
           </h2>
           <p className="mt-6 text-lg text-brand-slate leading-relaxed max-w-xl">
-            Kids learning to throw their first jab. Adults building real
-            strength. Small groups getting real coaching. Pick your lane.
+            Coaching adults to build strength that lasts. Coaching kids to
+            build it from the start. Pick your lane — or pick one for the
+            whole family.
           </p>
         </div>
 
