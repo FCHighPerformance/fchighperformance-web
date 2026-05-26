@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FC High Performance — Website
 
-## Getting Started
+The marketing site for [fchighperformance.com](https://fchighperformance.com).
 
-First, run the development server:
+## Stack
+
+- **Framework:** Next.js 16 (App Router) + TypeScript
+- **Styling:** Tailwind CSS 4 (CSS-first config in `src/app/globals.css`)
+- **Fonts:** Oswald (display) + Montserrat (body) via `next/font`
+- **Hosting:** Vercel
+- **Forms / CRM:** GoHighLevel (form embedded via iframe; all leads/SMS/email automation runs in GHL — no code-side handling)
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open <http://localhost:3000>.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/
+    layout.tsx       Root layout — loads fonts + metadata
+    page.tsx         The single landing page — imports each section
+    globals.css      Tailwind import + FC brand tokens (@theme block)
+  components/
+    Header.tsx       Sticky nav with logo + CTA
+    Hero.tsx         Dark hero with headline + primary CTA
+    Programs.tsx     4-card grid (Kids Boxing / S&C / Small Group / 1-on-1)
+    About.tsx        Coach intro + portrait placeholder
+    Testimonials.tsx 3-quote grid
+    BookingForm.tsx  Embedded GoHighLevel form iframe
+    Footer.tsx       Contact info + hours
+  data/
+    site.ts          Site-wide constants (phone, email, GHL form ID)
+    programs.ts      Program list — edit here to change cards
+    testimonials.ts  Quote list — edit here to swap testimonials
+public/
+  logo.webp          FC High Performance logo
+```
 
-## Learn More
+## How to make common edits
 
-To learn more about Next.js, take a look at the following resources:
+| Change | Where to edit |
+|---|---|
+| Phone number, email, address, hours | `src/data/site.ts` |
+| Program copy, pricing, CTAs | `src/data/programs.ts` |
+| Testimonials | `src/data/testimonials.ts` |
+| Brand colors | `src/app/globals.css` (`@theme inline` block) |
+| Fonts | `src/app/layout.tsx` (next/font imports) |
+| Hero headline / About bio | `src/components/Hero.tsx`, `src/components/About.tsx` |
+| Form fields (name, phone, etc.) | **Inside GoHighLevel** — the form is embedded as an iframe |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Brand palette
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Token | Hex | Use |
+|---|---|---|
+| `brand-dark` | `#232323` | Headers, dark sections, primary text on white |
+| `brand-amber` | `#F6AD55` | Primary CTAs, accent highlights |
+| `brand-slate` | `#607179` | Secondary text |
+| `brand-cream` | `#FAFAFA` | Alternating section backgrounds |
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Pushes to `main` auto-deploy to Vercel under the FC High Performance account.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Handoff notes
+
+See `HANDOFF.md` (TODO — to be written before launch) for account inventory,
+DNS configuration, and credentials.
