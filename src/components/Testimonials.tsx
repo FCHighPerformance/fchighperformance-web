@@ -2,38 +2,53 @@ import { testimonials } from "@/data/testimonials";
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 sm:py-28 bg-white">
+    <section id="testimonials" className="py-24 sm:py-32 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-amber">
-            Success Stories
-          </p>
-          <h2 className="mt-4 text-4xl sm:text-5xl font-bold uppercase tracking-tight">
-            From the people who train here
+        <div className="max-w-2xl">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-8 bg-brand-amber" />
+            <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-brand-slate">
+              Success Stories
+            </p>
+          </div>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight leading-[0.95]">
+            What the people<br />who train here say.
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
           {testimonials.map((t, idx) => (
             <figure
               key={idx}
-              className="flex flex-col bg-brand-cream p-8 rounded-2xl border border-brand-dark/5"
+              className="group flex flex-col bg-brand-cream p-8 sm:p-10 rounded-2xl border border-brand-dark/5 hover:border-brand-dark/15 transition-colors"
             >
-              <blockquote className="flex-1 text-lg text-brand-dark/85 leading-relaxed">
-                <span aria-hidden className="text-brand-amber text-4xl leading-none">
-                  &ldquo;
-                </span>
-                <span className="block mt-2">{t.quote}</span>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                className="h-6 w-6 text-brand-amber"
+                fill="currentColor"
+              >
+                <path d="M9.5 6c-3 0-5.5 2.5-5.5 5.5v6.5h6.5v-6.5h-3.5c0-1.93 1.57-3.5 3.5-3.5v-2zm10 0c-3 0-5.5 2.5-5.5 5.5v6.5h6.5v-6.5h-3.5c0-1.93 1.57-3.5 3.5-3.5v-2z" />
+              </svg>
+              <blockquote className="mt-5 flex-1 text-lg text-brand-dark/85 leading-relaxed">
+                {t.quote}
               </blockquote>
-              <figcaption className="mt-6 pt-6 border-t border-brand-dark/10">
-                <p className="font-bold uppercase tracking-wide text-sm">
-                  {t.name}
-                </p>
-                {t.program && (
-                  <p className="text-xs uppercase tracking-wider text-brand-slate mt-1">
-                    {t.program}
+              <figcaption className="mt-8 pt-6 border-t border-brand-dark/10 flex items-center gap-3">
+                {/* Avatar placeholder — circle until real photos arrive */}
+                <div
+                  aria-hidden
+                  className="h-10 w-10 rounded-full bg-brand-dark/10 ring-1 ring-brand-dark/5"
+                />
+                <div>
+                  <p className="font-bold uppercase tracking-wide text-sm text-brand-dark">
+                    {t.name}
                   </p>
-                )}
+                  {t.program && (
+                    <p className="text-[11px] uppercase tracking-[0.15em] text-brand-slate mt-0.5">
+                      {t.program}
+                    </p>
+                  )}
+                </div>
               </figcaption>
             </figure>
           ))}

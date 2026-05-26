@@ -10,22 +10,35 @@ import { site } from "@/data/site";
  */
 export function BookingForm() {
   return (
-    <section id="book" className="py-20 sm:py-28 bg-brand-dark text-white">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <section id="book" className="relative py-24 sm:py-32 bg-brand-dark text-white overflow-hidden">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            "radial-gradient(ellipse at 50% 100%, rgba(246,173,85,0.08), transparent 60%)",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-amber">
-            Book a Session
-          </p>
-          <h2 className="mt-4 text-4xl sm:text-5xl font-bold uppercase tracking-tight">
-            Come see what we&rsquo;re about
+          <div className="inline-flex items-center gap-3 mb-6">
+            <span className="h-px w-8 bg-brand-amber" />
+            <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/60">
+              Book Your Session
+            </p>
+            <span className="h-px w-8 bg-brand-amber" />
+          </div>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight leading-[0.95]">
+            Come see what<br />we&rsquo;re about.
           </h2>
-          <p className="mt-6 text-lg text-white/80">
-            Fill this out and we&rsquo;ll be in touch. Your first 1-on-1
-            session is $30 (normally $50).
+          <p className="mt-6 text-lg text-white/75 leading-relaxed">
+            Tell us a little about you and we&rsquo;ll be in touch to get you
+            scheduled. No pressure, no commitment.
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl p-2 sm:p-4 shadow-2xl">
+        <div className="bg-white rounded-2xl p-2 sm:p-4 shadow-2xl shadow-black/30 ring-1 ring-white/10">
           <iframe
             src={site.ghlForm.src}
             id={`inline-${site.ghlForm.id}`}

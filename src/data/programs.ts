@@ -1,6 +1,7 @@
 /**
  * Program offerings. TODO with owner: confirm each program's
- * schedule, pricing, and CTA destination.
+ * schedule and CTA destination. Pricing intentionally not shown here —
+ * conversion lives at the booking form.
  */
 export type Program = {
   slug: string;
@@ -30,38 +31,38 @@ export const programs: Program[] = [
     name: "Strength & Conditioning",
     for: "All adult athletes",
     blurb:
-      "Programmed group training to build real-world strength, work capacity, and durability.",
+      "Programmed group training to build real-world strength, work capacity, and durability — without the commercial-gym filler.",
     bullets: [
       "Periodized programming",
       "Group accountability",
       "Open to all fitness levels",
     ],
-    cta: { label: "Book a Free Session", href: "#book" },
+    cta: { label: "Try Your First Class", href: "#book" },
   },
   {
     slug: "small-group-pt",
     name: "Small Group Personal Training",
     for: "Adults who want coaching, not a class",
     blurb:
-      "Personalized programming in a small-group setting. Coach attention without 1-on-1 pricing.",
+      "Personalized programming in a small-group setting. Real coach attention. Real coaching, not a follow-along.",
     bullets: [
       "4–6 athletes per session",
       "Individual programming",
-      "Real coaching, real progress",
+      "Coaching on every rep",
     ],
-    cta: { label: "Book a Free Session", href: "#book" },
+    cta: { label: "Book Your First Session", href: "#book" },
   },
   {
     slug: "one-on-one",
     name: "1-on-1 Training",
     for: "Adults 40+",
     blurb:
-      "Personalized fitness experience designed for adults 40+. Start with a $30 intro session (normally $50).",
+      "A personalized program built around your body, your history, and what you actually want to do better.",
     bullets: [
       "Fitness & movement assessment",
       "Strength & endurance review",
       "Nutrition & lifestyle consult",
     ],
-    cta: { label: "Book Your $30 Session", href: "#book" },
+    cta: { label: "Book Your First Session", href: "#book" },
   },
 ];

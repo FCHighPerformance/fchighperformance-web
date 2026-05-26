@@ -11,9 +11,20 @@ export const site = {
   address: "TODO: confirm address with owner",
   hours: "TODO: confirm hours with owner",
   primaryCta: {
-    label: "Book a Session",
+    label: "Book Your First Session",
     href: "#book",
   },
+  secondaryCta: {
+    label: "See Programs",
+    href: "#programs",
+  },
+  // Subtle authority — vague enough to be true, owner can sharpen later
+  // TODO with owner: replace with sharper numbers (e.g. "12+ Years", "500+ Athletes")
+  proofPoints: [
+    { value: "10+", label: "Years Coaching" },
+    { value: "All Ages", label: "Kids 7+ and Adults" },
+    { value: "4", label: "Programs Built On Results" },
+  ],
   // GoHighLevel form embed — see project memory for context
   ghlForm: {
     id: "DQkJl9Z40D0yfOSYdtLl",
