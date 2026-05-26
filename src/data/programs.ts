@@ -25,7 +25,7 @@ export const programs: Program[] = [
       "Strength & endurance review",
       "Nutrition & lifestyle consult",
     ],
-    cta: { label: "Book Your First Session", href: "#book" },
+    cta: { label: "Talk to Coach", href: "#book" },
   },
   {
     slug: "small-group-pt",
@@ -38,7 +38,7 @@ export const programs: Program[] = [
       "Individual programming",
       "Coaching on every rep",
     ],
-    cta: { label: "Book Your First Session", href: "#book" },
+    cta: { label: "Talk to Coach", href: "#book" },
   },
   {
     slug: "strength-conditioning",
@@ -51,7 +51,7 @@ export const programs: Program[] = [
       "Group accountability",
       "Open to all fitness levels",
     ],
-    cta: { label: "Try Your First Class", href: "#book" },
+    cta: { label: "Talk to Coach", href: "#book" },
   },
   {
     slug: "kids-boxing",
@@ -64,6 +64,6 @@ export const programs: Program[] = [
       "Footwork, technique, conditioning",
       "Sparring options as kids progress",
     ],
-    cta: { label: "Get Class Schedule", href: "#book" },
+    cta: { label: "Talk to Coach", href: "#book" },
   },
 ];

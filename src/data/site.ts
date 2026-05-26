@@ -11,7 +11,7 @@ export const site = {
   address: "TODO: confirm address with owner",
   hours: "TODO: confirm hours with owner",
   primaryCta: {
-    label: "Book Your First Session",
+    label: "Talk to Coach Now",
     href: "#book",
   },
   secondaryCta: {

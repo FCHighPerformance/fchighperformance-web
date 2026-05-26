@@ -25,16 +25,16 @@ export function BookingForm() {
           <div className="inline-flex items-center gap-3 mb-6">
             <span className="h-px w-8 bg-brand-amber" />
             <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/60">
-              Book Your Session
+              Talk to Coach
             </p>
             <span className="h-px w-8 bg-brand-amber" />
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight leading-[0.95]">
-            Come see what<br />we&rsquo;re about.
+            Reach out.<br />Coach will be in touch.
           </h2>
           <p className="mt-6 text-lg text-white/75 leading-relaxed">
-            Tell us a little about you and we&rsquo;ll be in touch to get you
-            scheduled. No pressure, no commitment.
+            Tell us a little about you and Coach will reach out personally to
+            match you to the right program. No pressure, no commitment.
           </p>
         </div>
 
