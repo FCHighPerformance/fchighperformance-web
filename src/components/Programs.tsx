@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { programs } from "@/data/programs";
 
 export function Programs() {
@@ -23,8 +24,9 @@ export function Programs() {
 
         <div className="mt-16 grid gap-px bg-brand-dark/5 sm:grid-cols-2 lg:grid-cols-4 rounded-2xl overflow-hidden ring-1 ring-brand-dark/5">
           {programs.map((program, idx) => (
-            <article
+            <Link
               key={program.slug}
+              href={`/programs/${program.slug}`}
               className="group relative flex flex-col bg-white p-8 hover:bg-brand-cream transition-colors"
             >
               <div className="flex items-baseline justify-between">
@@ -50,14 +52,11 @@ export function Programs() {
                   </li>
                 ))}
               </ul>
-              <a
-                href={program.cta.href}
-                className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-brand-dark group-hover:text-brand-amber-hover transition-colors"
-              >
-                {program.cta.label}
+              <span className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-brand-dark group-hover:text-brand-amber-hover transition-colors">
+                Explore Program
                 <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
-              </a>
-            </article>
+              </span>
+            </Link>
           ))}
         </div>
       </div>

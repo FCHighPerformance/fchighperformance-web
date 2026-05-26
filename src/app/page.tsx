@@ -8,6 +8,8 @@ import { Guarantee } from "@/components/Guarantee";
 import { FAQ } from "@/components/FAQ";
 import { BookingForm } from "@/components/BookingForm";
 import { Footer } from "@/components/Footer";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { StickyMobileCta } from "@/components/StickyMobileCta";
 
 export default function Home() {
   return (
@@ -15,15 +17,16 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Programs />
-        <Method />
-        <About />
-        <Testimonials />
-        <Guarantee />
-        <FAQ />
+        <ScrollReveal as="section"><Programs /></ScrollReveal>
+        <ScrollReveal as="section"><Method /></ScrollReveal>
+        <ScrollReveal as="section"><About /></ScrollReveal>
+        <ScrollReveal as="section"><Testimonials /></ScrollReveal>
+        <ScrollReveal as="section"><Guarantee /></ScrollReveal>
+        <ScrollReveal as="section"><FAQ /></ScrollReveal>
         <BookingForm />
       </main>
       <Footer />
+      <StickyMobileCta />
     </>
   );
 }

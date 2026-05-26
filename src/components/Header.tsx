@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data/site";
+import { NavLinks } from "./NavLinks";
+import { OpenNow } from "./OpenNow";
 
 const navLinks = [
   { label: "Programs", href: "#programs" },
@@ -12,6 +14,21 @@ const navLinks = [
 export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur supports-[backdrop-filter]:bg-brand-dark/80 border-b border-white/5">
+      {/* Slim status bar — Open/Closed + phone */}
+      <div className="hidden sm:block border-b border-white/5 bg-black/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-8 items-center justify-between text-white/55">
+            <OpenNow className="text-white/65" />
+            <a
+              href={site.phoneHref}
+              className="text-[11px] font-semibold uppercase tracking-[0.15em] hover:text-white transition-colors"
+            >
+              {site.phone}
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3">
@@ -26,17 +43,7 @@ export function Header() {
             <span className="sr-only">{site.name}</span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-10">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-[13px] font-medium uppercase tracking-[0.15em] text-white/70 hover:text-white transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+          <NavLinks links={navLinks} />
 
           <a
             href={site.primaryCta.href}
