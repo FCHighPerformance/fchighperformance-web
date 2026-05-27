@@ -20,21 +20,21 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "My kid used to be shy. Six months in, he's leading warmups and made real friends he didn't have at school. Coach makes them work. But they leave smiling every time.",
+      "My son walks into a room now, introduces himself, gives a real handshake. He wouldn't have done any of that a year ago. I sent him here for the boxing. He's come back with everything else.",
     name: "Marcus Williams",
     program: "Kids Boxing",
     avatar: "/testimonial-marcus.jpg", // PLACEHOLDER
   },
   {
     quote:
-      "Walked in thinking I'd just do classes. Six months later I'm hitting numbers I never thought I could. Coach pushes hard but knows when to back off.",
+      "I used to dread getting dressed in the morning. Now I open my closet, grab whatever I want, and feel good in it. Didn't think strength training would fix that part of my life. It fixed a lot of parts.",
     name: "Lauren Mitchell",
     program: "Strength & Conditioning",
     avatar: "/testimonial-sarah.jpg", // PLACEHOLDER
   },
   {
     quote:
-      "I walked in with bad knees and zero confidence at 52. Coach met me where I was. Built the work around my body, not around a template. A year later I move better than I have in a decade.",
+      "I came in figuring I'd just stay maintained at 62. A year later I'm chasing the grandkids around the yard and not paying for it the next morning. Feels like I bought a decade back.",
     name: "David Pereira",
     program: "1-on-1 Training",
     avatar: "/testimonial-tony.jpg", // PLACEHOLDER
