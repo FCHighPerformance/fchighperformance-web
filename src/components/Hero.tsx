@@ -15,7 +15,8 @@ export function Hero() {
           fill
           priority
           sizes="(min-width: 1024px) 50vw, 0vw"
-          className="object-cover object-center"
+          className="object-cover"
+          style={{ objectPosition: "50% 15%" }}
         />
         {/* Cinematic gradient blend from dark (left) to image (right edge) */}
         <div
