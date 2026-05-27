@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { testimonials } from "@/data/testimonials";
 
 export function Testimonials() {
@@ -33,18 +34,29 @@ export function Testimonials() {
               <blockquote className="mt-5 flex-1 text-lg text-brand-dark/85 leading-relaxed">
                 {t.quote}
               </blockquote>
-              <figcaption className="mt-8 pt-6 border-t border-brand-dark/10 flex items-center gap-3">
-                {/* Avatar placeholder — circle until real photos arrive */}
-                <div
-                  aria-hidden
-                  className="h-10 w-10 rounded-full bg-brand-dark/10 ring-1 ring-brand-dark/5"
-                />
-                <div>
-                  <p className="font-bold uppercase tracking-wide text-sm text-brand-dark">
+              <figcaption className="mt-8 pt-6 border-t border-brand-dark/10 flex items-center gap-4">
+                {t.avatar ? (
+                  <div className="relative h-12 w-12 rounded-full overflow-hidden ring-1 ring-brand-dark/10 flex-shrink-0">
+                    <Image
+                      src={t.avatar}
+                      alt={`${t.name} portrait`}
+                      fill
+                      sizes="48px"
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div
+                    aria-hidden
+                    className="h-12 w-12 rounded-full bg-brand-dark/10 ring-1 ring-brand-dark/5 flex-shrink-0"
+                  />
+                )}
+                <div className="min-w-0">
+                  <p className="font-bold uppercase tracking-wide text-sm text-brand-dark truncate">
                     {t.name}
                   </p>
                   {t.program && (
-                    <p className="text-[11px] uppercase tracking-[0.15em] text-brand-slate mt-0.5">
+                    <p className="text-[11px] uppercase tracking-[0.15em] text-brand-slate mt-0.5 truncate">
                       {t.program}
                     </p>
                   )}
