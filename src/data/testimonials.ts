@@ -27,8 +27,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "I've been through every commercial gym in town. Nothing like this. Real programming, real coaching, and a group that pulls you back when you'd rather sleep in.",
-    name: "Anthony Walker",
+      "Walked in thinking I'd just do classes. Six months later I'm hitting numbers I never thought I could. Coach pushes hard but knows when to back off.",
+    name: "Lauren Mitchell",
     program: "Strength & Conditioning",
     avatar: "/testimonial-sarah.jpg", // PLACEHOLDER
   },
