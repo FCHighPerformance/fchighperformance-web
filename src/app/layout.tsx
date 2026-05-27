@@ -3,6 +3,7 @@ import { Oswald, Montserrat } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
 import { getOpeningHoursSchema } from "@/data/hours";
+import { BookingDialog } from "@/components/BookingDialog";
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -147,6 +148,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <BookingDialog />
       </body>
     </html>
   );
