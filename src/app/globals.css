@@ -12,6 +12,18 @@
   /* Type system */
   --font-display: var(--font-oswald);
   --font-sans: var(--font-montserrat);
+
+  /* Animation: testimonial marquee — used by TestimonialMarquee */
+  --animate-marquee: marquee 45s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 html {
@@ -28,4 +40,16 @@ body {
 h1, h2, h3, .font-display {
   font-family: var(--font-oswald), Impact, sans-serif;
   letter-spacing: -0.01em;
+}
+
+/* Pause marquee on hover so people can read */
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }

@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { TestimonialMarquee } from "@/components/TestimonialMarquee";
 import { Programs } from "@/components/Programs";
 import { Method } from "@/components/Method";
 import { About } from "@/components/About";
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <TestimonialMarquee />
         <ScrollReveal as="section"><Programs /></ScrollReveal>
         <ScrollReveal as="section"><Method /></ScrollReveal>
         <ScrollReveal as="section"><About /></ScrollReveal>
