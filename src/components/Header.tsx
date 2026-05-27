@@ -6,10 +6,10 @@ import { OpenNow } from "./OpenNow";
 import { MobileMenu } from "./MobileMenu";
 
 const navLinks = [
-  { label: "Programs", href: "#programs" },
-  { label: "Our Method", href: "#method" },
-  { label: "About", href: "#about" },
-  { label: "Stories", href: "#testimonials" },
+  { label: "Programs", href: "/programs" },
+  { label: "Our Method", href: "/our-method" },
+  { label: "About", href: "/about" },
+  { label: "Stories", href: "/stories" },
 ];
 
 export function Header() {
@@ -53,8 +53,7 @@ export function Header() {
             href={site.primaryCta.href}
             className="inline-flex items-center justify-center rounded-full bg-brand-amber px-4 sm:px-5 py-2.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.1em] sm:tracking-[0.12em] text-brand-dark hover:bg-brand-amber-hover transition-colors shadow-lg shadow-brand-amber/20 flex-shrink-0 whitespace-nowrap"
           >
-            <span className="hidden xs:inline sm:inline">{site.primaryCta.label}</span>
-            <span className="xs:hidden sm:hidden">Talk to Coach</span>
+            {site.primaryCta.label}
           </a>
         </div>
       </div>

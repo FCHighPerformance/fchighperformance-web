@@ -7,27 +7,21 @@ import { site } from "@/data/site";
 import { programs } from "@/data/programs";
 
 /**
- * Full-screen mobile navigation. Surfaces both:
- *  - The section anchors (Method, About, Stories, Book) for the
- *    single-page scroll experience.
- *  - The dedicated program detail pages — critical for mobile UX
- *    AND SEO since these are real routes (/programs/<slug>) that
- *    deserve their own visit.
- *
- * Hamburger icon on the left of the header (mobile only). The menu
- * panel is brand-dark with white type to match the header system.
+ * Full-screen mobile navigation. Surfaces the dedicated topic pages
+ * AND the individual program detail pages — critical for mobile UX
+ * AND SEO since each route is its own page.
  */
 
-const sectionLinks = [
-  { label: "Our Method", href: "/#method" },
-  { label: "About Coach", href: "/#about" },
-  { label: "Success Stories", href: "/#testimonials" },
+const exploreLinks = [
+  { label: "Home", href: "/" },
+  { label: "Our Method", href: "/our-method" },
+  { label: "About Coach", href: "/about" },
+  { label: "Success Stories", href: "/stories" },
 ];
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
 
-  // Lock body scroll while open
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -39,7 +33,6 @@ export function MobileMenu() {
     };
   }, [open]);
 
-  // Close on Escape
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
@@ -51,7 +44,6 @@ export function MobileMenu() {
 
   return (
     <>
-      {/* Hamburger trigger — mobile only */}
       <button
         type="button"
         onClick={() => setOpen(true)}
@@ -76,7 +68,6 @@ export function MobileMenu() {
         </svg>
       </button>
 
-      {/* Full-screen overlay panel */}
       <div
         className={`fixed inset-0 z-[70] bg-brand-dark text-white md:hidden transition-opacity duration-200 ${
           open ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -84,7 +75,7 @@ export function MobileMenu() {
         aria-hidden={!open}
       >
         <div className="flex flex-col h-full overflow-y-auto">
-          {/* Top bar with logo + close */}
+          {/* Top bar */}
           <div className="flex items-center justify-between h-20 px-4 border-b border-white/5 flex-shrink-0">
             <Link
               href="/"
@@ -129,9 +120,13 @@ export function MobileMenu() {
             <div className="mb-10">
               <div className="flex items-center gap-3 mb-5">
                 <span className="h-px w-6 bg-brand-amber" />
-                <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/60">
-                  Programs
-                </p>
+                <Link
+                  href="/programs"
+                  onClick={() => setOpen(false)}
+                  className="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/60 hover:text-white"
+                >
+                  Programs →
+                </Link>
               </div>
               <ul>
                 {programs.map((p) => (
@@ -161,7 +156,7 @@ export function MobileMenu() {
               </ul>
             </div>
 
-            {/* Explore (section anchors) */}
+            {/* Explore (dedicated pages) */}
             <div className="mb-10">
               <div className="flex items-center gap-3 mb-5">
                 <span className="h-px w-6 bg-brand-amber" />
@@ -170,7 +165,7 @@ export function MobileMenu() {
                 </p>
               </div>
               <ul>
-                {sectionLinks.map((link) => (
+                {exploreLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}

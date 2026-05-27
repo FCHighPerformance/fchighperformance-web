@@ -13,6 +13,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+    {
+      url: `${base}/programs`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${base}/our-method`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/about`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/stories`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     ...programs.map((program) => ({
       url: `${base}/programs/${program.slug}`,
       lastModified,
