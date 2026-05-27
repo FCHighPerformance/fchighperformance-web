@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { site } from "@/data/site";
 import { formatHoursLabel } from "@/data/hours";
 import { MapEmbed } from "./MapEmbed";
@@ -64,9 +65,20 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <p>
-            Old-school training, every age.
-          </p>
+          <nav className="flex items-center gap-5">
+            <Link
+              href="/privacy"
+              className="hover:text-white/70 transition-colors"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/terms"
+              className="hover:text-white/70 transition-colors"
+            >
+              Terms
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>
