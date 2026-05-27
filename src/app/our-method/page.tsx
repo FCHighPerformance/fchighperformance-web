@@ -30,7 +30,7 @@ export default function OurMethodPage() {
               Just the work.
             </>
           }
-          subtitle="The FC High Performance coaching method — honest assessment, individual programming, and real coaching every session."
+          subtitle="The FC High Performance coaching method. Honest assessment, individual programming, and real coaching every session."
           breadcrumb={[{ label: "Home", href: "/" }]}
         />
         <Method />

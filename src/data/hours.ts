@@ -8,7 +8,7 @@ export type DayHours =
   | { closed?: false; open: string; close: string };
 
 export const hours: DayHours[] = [
-  { closed: true }, // Sunday — TODO confirm
+  { closed: true }, // Sunday. TODO confirm
   { open: "06:00", close: "20:00" }, // Monday
   { open: "06:00", close: "20:00" }, // Tuesday
   { open: "06:00", close: "20:00" }, // Wednesday
@@ -20,12 +20,12 @@ export const hours: DayHours[] = [
 const DAY_NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 export function formatHoursLabel(): string {
-  // Compact human-readable summary. e.g. "Mon–Fri 6am–8pm · Sat 8am–2pm"
-  return "Mon–Fri 6am–8pm · Sat 8am–2pm · Sun closed";
+  // Compact human-readable summary. e.g. "Mon to Fri 6am to 8pm · Sat 8am to 2pm"
+  return "Mon to Fri 6am to 8pm · Sat 8am to 2pm · Sun closed";
 }
 
 /**
- * Returns current open/closed state. Pure function — call from a client
+ * Returns current open/closed state. Pure function. Call from a client
  * component that re-renders on an interval.
  */
 export function getOpenStatus(now: Date = new Date()): {

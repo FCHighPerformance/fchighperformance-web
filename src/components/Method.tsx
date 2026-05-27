@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 /**
- * "How We Train" — three-step methodology section. High-converting
+ * "How We Train". Three-step methodology section. High-converting
  * pages always explain the process so prospects know what they're
  * signing up for. Numbers, short headers, plain-spoken copy.
  */
@@ -9,17 +9,17 @@ const steps = [
   {
     n: "01",
     title: "Assess",
-    body: "Every athlete starts with an honest look at where you are — movement, strength, history, goals. No assumptions, no cookie-cutter plans.",
+    body: "Every athlete starts with an honest look at where you are. Movement, strength, history, goals. No assumptions, no cookie-cutter plans.",
   },
   {
     n: "02",
     title: "Program",
-    body: "We build a program around what you actually need — boxing fundamentals, strength work, conditioning — and adjust it as you progress.",
+    body: "We build a program around what you actually need. Boxing fundamentals, strength work, conditioning. And adjust it as you progress.",
   },
   {
     n: "03",
     title: "Train",
-    body: "You show up. We coach every session. The community pulls you back when motivation runs low — that's how progress actually sticks.",
+    body: "You show up. We coach every session. The community pulls you back when motivation runs low. That's how progress actually sticks.",
   },
 ];
 
@@ -69,7 +69,7 @@ export function Method() {
           </h2>
           <p className="mt-6 text-lg text-white/70 leading-relaxed max-w-2xl">
             No gimmicks. No hype. A real process built over years of coaching
-            kids and adults — refined every single week.
+            kids and adults. Refined every single week.
           </p>
         </div>
 

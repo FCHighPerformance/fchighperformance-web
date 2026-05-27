@@ -16,7 +16,7 @@ const navLinks = [
 export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur supports-[backdrop-filter]:bg-brand-dark/80 border-b border-white/5">
-      {/* Slim status bar — Open/Closed + phone (desktop only) */}
+      {/* Slim status bar. Open/Closed + phone (desktop only) */}
       <div className="hidden sm:block border-b border-white/5 bg-black/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-8 items-center justify-between text-white/55">
@@ -37,7 +37,7 @@ export function Header() {
             <MobileMenu />
             <Link href="/" className="flex items-center gap-3 min-w-0">
               <Image
-                src="/logo.webp"
+                src="/logo.png"
                 alt={`${site.name} logo`}
                 width={56}
                 height={56}

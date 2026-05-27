@@ -5,7 +5,7 @@ import { site } from "@/data/site";
  * Embeds the GoHighLevel form that the existing site uses. All
  * submissions flow into the owner's GHL CRM and trigger whatever
  * SMS/email/automation is already wired up over there. To change
- * form fields, edit the form inside GoHighLevel — no code changes
+ * form fields, edit the form inside GoHighLevel. No code changes
  * needed.
  */
 export function BookingForm() {
@@ -64,7 +64,7 @@ export function BookingForm() {
         </div>
       </div>
 
-      {/* GHL embed script — handles auto-resize of the iframe */}
+      {/* GHL embed script. Handles auto-resize of the iframe */}
       <Script src={site.ghlForm.script} strategy="afterInteractive" />
     </section>
   );

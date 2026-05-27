@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "FC High Performance — Old-school training. Real community.";
+export const alt = "FC High Performance. Old-school training. Real community.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

@@ -24,14 +24,14 @@ export async function generateMetadata({
   const program = programs.find((p) => p.slug === slug);
   if (!program) return {};
 
-  // Just the program name — the layout's title template adds the site suffix
+  // Just the program name. The layout's title template adds the site suffix
   const title = program.name;
   const description = program.blurb;
   return {
     title,
     description,
     openGraph: {
-      title: `${program.name} — ${site.name}`,
+      title: `${program.name} | ${site.name}`,
       description,
       type: "website",
       url: `${site.url}/programs/${program.slug}`,

@@ -8,7 +8,7 @@ import { programs } from "@/data/programs";
 
 /**
  * Full-screen mobile navigation. Surfaces the dedicated topic pages
- * AND the individual program detail pages — critical for mobile UX
+ * AND the individual program detail pages. Critical for mobile UX
  * AND SEO since each route is its own page.
  */
 
@@ -84,7 +84,7 @@ export function MobileMenu() {
               className="flex items-center gap-3"
             >
               <Image
-                src="/logo.webp"
+                src="/logo.png"
                 alt={`${site.name} logo`}
                 width={56}
                 height={56}

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 type NavLink = { label: string; href: string };
 
 /**
- * Desktop nav — highlights the currently active dedicated page based
+ * Desktop nav. Highlights the currently active dedicated page based
  * on URL pathname. Underline + amber color slides between links.
  */
 export function NavLinks({ links }: { links: NavLink[] }) {

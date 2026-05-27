@@ -17,7 +17,7 @@ export function Programs() {
           </h2>
           <p className="mt-6 text-lg text-brand-slate leading-relaxed max-w-xl">
             Coaching adults to build strength that lasts. Coaching kids to
-            build it from the start. Pick your lane — or pick one for the
+            build it from the start. Pick your lane. Or pick one for the
             whole family.
           </p>
         </div>

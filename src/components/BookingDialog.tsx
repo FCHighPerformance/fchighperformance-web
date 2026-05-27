@@ -14,7 +14,7 @@ import { site } from "@/data/site";
  *   weight isn't penalized.
  * - If JS is disabled, the link's default `#book` anchor still
  *   scrolls the user to the BookingForm section at the bottom of
- *   the page — graceful fallback.
+ *   the page. Graceful fallback.
  * - Native HTML <dialog> handles focus trap, Escape-to-close, and
  *   inert backdrop without extra JS.
  */
@@ -93,7 +93,7 @@ export function BookingDialog() {
             </p>
           </div>
 
-          {/* Form — only mounts after first open */}
+          {/* Form. Only mounts after first open */}
           <div className="bg-white rounded-b-2xl p-2 sm:p-3">
             {hasOpened ? (
               <iframe
@@ -126,7 +126,7 @@ export function BookingDialog() {
         </div>
       </dialog>
 
-      {/* GHL embed script — only injected after first dialog open */}
+      {/* GHL embed script. Only injected after first dialog open */}
       {hasOpened && (
         <Script src={site.ghlForm.script} strategy="afterInteractive" />
       )}

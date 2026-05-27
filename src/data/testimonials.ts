@@ -1,7 +1,7 @@
 /**
  * Testimonials.
  *
- * ⚠️ ALL THREE BELOW ARE PLACEHOLDERS — names, quotes, and avatar
+ * ⚠️ ALL THREE BELOW ARE PLACEHOLDERS. Names, quotes, and avatar
  * images are stand-ins to keep the page from looking templated until
  * real customer testimonials are collected.
  *
@@ -20,7 +20,7 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "My kid used to be shy. Six months in, he's leading warmups and made real friends he didn't have at school. Coach makes them work — but they leave smiling every time.",
+      "My kid used to be shy. Six months in, he's leading warmups and made real friends he didn't have at school. Coach makes them work. But they leave smiling every time.",
     name: "Marcus Williams",
     program: "Kids Boxing",
     avatar: "/testimonial-marcus.jpg", // PLACEHOLDER
@@ -34,7 +34,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "I walked in with bad knees and zero confidence at 52. Coach met me where I was — built the work around my body, not around a template. A year later I move better than I have in a decade.",
+      "I walked in with bad knees and zero confidence at 52. Coach met me where I was. Built the work around my body, not around a template. A year later I move better than I have in a decade.",
     name: "David Pereira",
     program: "1-on-1 Training",
     avatar: "/testimonial-tony.jpg", // PLACEHOLDER

@@ -29,7 +29,7 @@ export function Guarantee() {
         </h2>
         <p className="mt-8 text-lg sm:text-xl text-white/75 leading-relaxed max-w-2xl mx-auto">
           No long contracts. No high-pressure pitch. Walk in, train with us,
-          meet the community — then decide if FC is where you want to put your
+          meet the community. Then decide if FC is where you want to put your
           work in.
         </p>
         <a

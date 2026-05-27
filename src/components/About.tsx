@@ -4,7 +4,7 @@ const credentials = [
   "Silver Level USA Boxing Coach",
   "Level 2 USA Boxing Official",
   "Certified S&C + Nutrition Coach",
-  "Semi-Pro Football — Norfolk Thunder",
+  "Semi-Pro Football. Norfolk Thunder",
 ];
 
 export function About() {
@@ -46,7 +46,7 @@ export function About() {
 
             <div className="mt-8 space-y-5 text-lg text-brand-dark/80 leading-relaxed">
               <p>
-                Coach Keith has spent over a decade in the corner — coaching
+                Coach Keith has spent over a decade in the corner. Coaching
                 kids and adults out of FC High Performance in Virginia Beach.
                 Silver Level USA Boxing Coach. Level 2 USA Boxing Official.
                 Certified Strength &amp; Conditioning Coach. Certified
@@ -57,7 +57,7 @@ export function About() {
               <p>
                 But credentials don&rsquo;t make athletes. The work does.
                 The community does. Showing up does. That&rsquo;s what FC is
-                built on — real coaching, real programming, and a room full
+                built on. Real coaching, real programming, and a room full
                 of people who pull you back the day you&rsquo;d rather stay
                 home.
               </p>

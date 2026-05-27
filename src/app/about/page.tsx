@@ -12,7 +12,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet the coach behind FC High Performance — USA Boxing coach, 10+ years training kids and adults, national championships official.",
+    "Meet the coach behind FC High Performance. USA Boxing coach, 10+ years training kids and adults, national championships official.",
   alternates: { canonical: `${site.url}/about` },
 };
 
@@ -30,7 +30,7 @@ export default function AboutPage() {
               Meet the community.
             </>
           }
-          subtitle="FC High Performance was built on a simple idea — training should make you stronger, tougher, and more connected to the people around you."
+          subtitle="FC High Performance was built on a simple idea. Training should make you stronger, tougher, and more connected to the people around you."
           breadcrumb={[{ label: "Home", href: "/" }]}
         />
         <About />

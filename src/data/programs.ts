@@ -1,9 +1,9 @@
 /**
- * Program offerings — ordered with the primary demographic (adults 40+)
+ * Program offerings. Ordered with the primary demographic (adults 40+)
  * first. Kids program intentionally placed last so the adult eye doesn't
  * scroll past their target program.
  *
- * `image` is optional — programs without one get a graceful gradient
+ * `image` is optional. Programs without one get a graceful gradient
  * placeholder on the dedicated program page.
  *
  * TODO with owner: confirm each program's schedule and CTA destination,
@@ -27,7 +27,7 @@ export const programs: Program[] = [
     name: "1-on-1 Training",
     for: "Adults 40+",
     blurb:
-      "Personalized coaching for adults rebuilding strength, mobility, and confidence — without the cookie-cutter gym routine.",
+      "Personalized coaching for adults rebuilding strength, mobility, and confidence. Without the cookie-cutter gym routine.",
     bullets: [
       "Fitness & movement assessment",
       "Strength & endurance review",
@@ -42,7 +42,7 @@ export const programs: Program[] = [
     blurb:
       "Personalized programming in a small-group setting. Real coach attention without 1-on-1 commitment.",
     bullets: [
-      "4–6 athletes per session",
+      "4 to 6 athletes per session",
       "Individual programming",
       "Coaching on every rep",
     ],
@@ -53,7 +53,7 @@ export const programs: Program[] = [
     name: "Strength & Conditioning",
     for: "All adult athletes",
     blurb:
-      "Programmed group training to build real-world strength, work capacity, and durability — without the commercial-gym filler.",
+      "Programmed group training to build real-world strength, work capacity, and durability. Without the commercial-gym filler.",
     bullets: [
       "Periodized programming",
       "Group accountability",
@@ -64,9 +64,9 @@ export const programs: Program[] = [
   {
     slug: "kids-boxing",
     name: "Kids Boxing",
-    for: "Ages 7–14",
+    for: "Ages 7 to 14",
     blurb:
-      "Large group classes that build discipline, confidence, and real boxing skill — in a community that has their back.",
+      "Large group classes that build discipline, confidence, and real boxing skill. In a community that has their back.",
     bullets: [
       "Coach-led group sessions",
       "Footwork, technique, conditioning",

@@ -3,7 +3,7 @@ import { formatHoursLabel } from "@/data/hours";
 import { OpenNow } from "./OpenNow";
 
 /**
- * Contact info block — phone, email, address, hours, live open/closed
+ * Contact info block. Phone, email, address, hours, live open/closed
  * indicator, and the embedded location map. Used on the /contact page.
  */
 export function ContactInfo() {
@@ -22,7 +22,7 @@ export function ContactInfo() {
               We answer back.
             </h2>
             <p className="mt-6 text-lg text-brand-dark/75 leading-relaxed">
-              Whether you&rsquo;re ready to book or just have questions —
+              Whether you&rsquo;re ready to book or just have questions,
               call, email, or fill out the form below. Coach gets back to
               everyone personally.
             </p>

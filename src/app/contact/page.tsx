@@ -9,7 +9,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Get in touch with ${site.name}. Call, email, or book your first session — Coach gets back personally.`,
+  description: `Get in touch with ${site.name}. Call, email, or book your first session. Coach gets back personally.`,
   alternates: { canonical: `${site.url}/contact` },
 };
 
@@ -27,7 +27,7 @@ export default function ContactPage() {
               We answer back.
             </>
           }
-          subtitle="Call, email, or fill out the form. We&rsquo;ll be in touch personally — no auto-responders, no pressure pitch."
+          subtitle="Call, email, or fill out the form. We&rsquo;ll be in touch personally. No auto-responders, no pressure pitch."
           breadcrumb={[{ label: "Home", href: "/" }]}
         />
         <ContactInfo />

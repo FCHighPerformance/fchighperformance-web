@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     site.name,
   ],
   openGraph: {
-    title: "FC High Performance — Never too early. Never too late.",
+    title: "FC High Performance. Never too early. Never too late.",
     description:
       "Boxing, strength & conditioning, and personal training for kids 7+ and adults 40+ who refuse to slow down.",
     url: site.url,
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
 };
 
-// Schema.org structured data — helps Google understand this is a local gym
+// Schema.org structured data. Helps Google understand this is a local gym
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ExerciseGym", "SportsActivityLocation"],
