@@ -1,23 +1,29 @@
+import Image from "next/image";
+
 export function About() {
   return (
     <section id="about" className="relative py-24 sm:py-32 bg-brand-cream">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-20 items-center">
-          {/* Portrait placeholder — refined dark block, replace when owner provides */}
+          {/* Coach portrait */}
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-brand-dark ring-1 ring-brand-dark/10 shadow-2xl shadow-brand-dark/20">
-              {/* TODO: replace with <Image src="/coach.jpg" fill className="object-cover" /> */}
+              <Image
+                src="/coach-portrait.jpg"
+                alt="Coach at FC High Performance"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover object-top"
+              />
+              {/* Subtle vignette to deepen the photo */}
               <div
-                aria-hidden="true"
+                aria-hidden
                 className="absolute inset-0"
                 style={{
-                  backgroundImage:
-                    "linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 50%), radial-gradient(ellipse at 50% 30%, rgba(96,113,121,0.25), transparent 70%)",
+                  background:
+                    "linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.35) 100%)",
                 }}
               />
-              <div className="absolute inset-x-0 bottom-0 p-8 text-white/30 text-[10px] uppercase tracking-[0.3em]">
-                Coach Portrait
-              </div>
             </div>
           </div>
 
@@ -57,6 +63,22 @@ export function About() {
                 Coach — TODO: confirm with owner
               </footer>
             </blockquote>
+
+            {/* Credentials chips */}
+            <div className="mt-10 flex flex-wrap gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full bg-brand-dark/5 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-brand-dark/80">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-amber" />
+                USA Boxing Coach
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full bg-brand-dark/5 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-brand-dark/80">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-amber" />
+                10+ Years Coaching
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full bg-brand-dark/5 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-brand-dark/80">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-amber" />
+                National Championships Official
+              </span>
+            </div>
           </div>
         </div>
       </div>

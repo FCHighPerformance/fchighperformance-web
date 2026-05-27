@@ -1,18 +1,42 @@
+import Image from "next/image";
 import { site } from "@/data/site";
 
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-brand-dark text-white">
-      {/* Subtle ambient light — restrained, premium, no amber wash */}
+      {/* Right-side photo on desktop (hidden on mobile to keep hero brand-forward) */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10"
+        className="hidden lg:block absolute inset-y-0 right-0 w-1/2 -z-10"
+      >
+        <Image
+          src="/hero-pad-work.jpg"
+          alt=""
+          fill
+          priority
+          sizes="(min-width: 1024px) 50vw, 0vw"
+          className="object-cover object-center"
+        />
+        {/* Cinematic gradient blend from dark (left) to image (right edge) */}
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(35,35,35,1) 0%, rgba(35,35,35,0.85) 20%, rgba(35,35,35,0.55) 45%, rgba(35,35,35,0.2) 75%, rgba(35,35,35,0.4) 100%)",
+          }}
+        />
+      </div>
+
+      {/* Ambient light + vignette (subtle, for non-image areas) */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-20"
         style={{
           backgroundImage:
             "radial-gradient(ellipse at 70% 0%, rgba(255,255,255,0.06), transparent 55%), radial-gradient(ellipse at 10% 100%, rgba(96,113,121,0.18), transparent 60%)",
         }}
       />
-      {/* Faint vignette */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10"
@@ -22,8 +46,8 @@ export function Hero() {
         }}
       />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 lg:pt-40 pb-20">
-        <div className="max-w-4xl">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 lg:pt-40 pb-20">
+        <div className="max-w-2xl lg:max-w-3xl">
           <div className="flex items-center gap-3 mb-8">
             <span className="h-px w-10 bg-brand-amber" />
             <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/70">
@@ -37,7 +61,7 @@ export function Hero() {
             Never too late.
           </h1>
 
-          <p className="mt-8 max-w-2xl text-lg sm:text-xl text-white/75 leading-relaxed">
+          <p className="mt-8 max-w-xl text-lg sm:text-xl text-white/80 leading-relaxed">
             Boxing, strength &amp; conditioning, and personal training for
             kids 7+ and adults 40+ who refuse to slow down.
           </p>
@@ -52,7 +76,7 @@ export function Hero() {
             </a>
             <a
               href={site.secondaryCta.href}
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/5 hover:border-white/30 transition-colors"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 bg-brand-dark/40 backdrop-blur px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10 hover:border-white/30 transition-colors"
             >
               {site.secondaryCta.label}
             </a>
@@ -60,8 +84,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Authority strip — subtle, integrated, owner-editable in site.ts */}
-      <div className="relative border-t border-white/10 bg-black/30">
+      {/* Authority strip */}
+      <div className="relative border-t border-white/10 bg-black/40 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
           <dl className="grid grid-cols-3 gap-6 text-center sm:text-left">
             {site.proofPoints.map((point) => (

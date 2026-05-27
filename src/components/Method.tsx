@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 /**
  * "How We Train" — three-step methodology section. High-converting
  * pages always explain the process so prospects know what they're
@@ -24,9 +26,30 @@ const steps = [
 export function Method() {
   return (
     <section id="method" className="relative py-24 sm:py-32 bg-brand-dark text-white overflow-hidden">
+      {/* Faint background photo of coach refereeing for atmosphere */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 opacity-25"
+      >
+        <Image
+          src="/coach-referee.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(35,35,35,0.85) 0%, rgba(35,35,35,0.92) 100%)",
+          }}
+        />
+      </div>
       <div
         aria-hidden="true"
-        className="absolute inset-0"
+        className="absolute inset-0 -z-10"
         style={{
           backgroundImage:
             "radial-gradient(ellipse at 0% 0%, rgba(255,255,255,0.04), transparent 50%), radial-gradient(ellipse at 100% 100%, rgba(96,113,121,0.15), transparent 50%)",
@@ -52,7 +75,7 @@ export function Method() {
 
         <ol className="mt-16 grid gap-px bg-white/10 lg:grid-cols-3 rounded-2xl overflow-hidden">
           {steps.map((step) => (
-            <li key={step.n} className="bg-brand-dark p-10">
+            <li key={step.n} className="bg-brand-dark/90 backdrop-blur-sm p-10">
               <div className="flex items-baseline gap-4">
                 <span className="font-display text-6xl text-brand-amber tabular-nums leading-none">
                   {step.n}

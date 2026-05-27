@@ -1,8 +1,14 @@
 /**
  * Program offerings — ordered with the primary demographic (adults 40+)
  * first. Kids program intentionally placed last so the adult eye doesn't
- * scroll past their target program. TODO with owner: confirm each
- * program's schedule and CTA destination.
+ * scroll past their target program.
+ *
+ * `image` is optional — programs without one get a graceful gradient
+ * placeholder on the dedicated program page.
+ *
+ * TODO with owner: confirm each program's schedule and CTA destination,
+ * and source dedicated photos for S&C, Small Group, 1-on-1 (currently
+ * only Kids Boxing has real photography).
  */
 export type Program = {
   slug: string;
@@ -11,6 +17,8 @@ export type Program = {
   blurb: string;
   bullets: string[];
   cta: { label: string; href: string };
+  image?: string;
+  imageAlt?: string;
 };
 
 export const programs: Program[] = [
@@ -65,5 +73,7 @@ export const programs: Program[] = [
       "Sparring options as kids progress",
     ],
     cta: { label: "Talk to Coach", href: "#book" },
+    image: "/kids-boxing-wide.jpg",
+    imageAlt: "Kids boxing class training together at FC High Performance",
   },
 ];
