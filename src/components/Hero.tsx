@@ -4,23 +4,39 @@ import { site } from "@/data/site";
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-brand-dark text-white">
-      {/* Right-side photo on desktop (hidden on mobile to keep hero brand-forward) */}
+      {/*
+        Photo behavior:
+          mobile / tablet: full-bleed background covering the whole hero
+            section, with a top-to-bottom dark gradient so the text stays
+            legible over the photo.
+          desktop (lg+):  right half only, with a left-to-right gradient
+            blending into the dark left half where the text sits.
+      */}
       <div
         aria-hidden="true"
-        className="hidden lg:block absolute inset-y-0 right-0 w-1/2 -z-10"
+        className="absolute inset-0 lg:inset-y-0 lg:right-0 lg:left-1/2 -z-10"
       >
         <Image
           src="/hero-pad-work.jpg"
           alt=""
           fill
           priority
-          sizes="(min-width: 1024px) 50vw, 0vw"
+          sizes="(min-width: 1024px) 50vw, 100vw"
           className="object-cover object-center"
         />
-        {/* Softer gradient blend from dark on left fading toward the photo */}
+        {/* Mobile/tablet overlay: dark top + bottom for text legibility */}
         <div
           aria-hidden
-          className="absolute inset-0"
+          className="absolute inset-0 lg:hidden"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(35,35,35,0.85) 0%, rgba(35,35,35,0.55) 35%, rgba(35,35,35,0.4) 60%, rgba(35,35,35,0.92) 100%)",
+          }}
+        />
+        {/* Desktop overlay: left-to-right blend (dark left, photo right) */}
+        <div
+          aria-hidden
+          className="absolute inset-0 hidden lg:block"
           style={{
             background:
               "linear-gradient(90deg, rgba(35,35,35,0.95) 0%, rgba(35,35,35,0.7) 22%, rgba(35,35,35,0.3) 55%, rgba(35,35,35,0.05) 85%, transparent 100%)",
@@ -28,21 +44,13 @@ export function Hero() {
         />
       </div>
 
-      {/* Ambient light + vignette (subtle, for non-image areas) */}
+      {/* Subtle ambient light for non-image areas (mostly visible on desktop left side) */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-20"
         style={{
           backgroundImage:
             "radial-gradient(ellipse at 70% 0%, rgba(255,255,255,0.06), transparent 55%), radial-gradient(ellipse at 10% 100%, rgba(96,113,121,0.18), transparent 60%)",
-        }}
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.4) 100%)",
         }}
       />
 
@@ -55,13 +63,13 @@ export function Hero() {
             </p>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase leading-[0.9] tracking-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase leading-[0.9] tracking-tight drop-shadow-[0_2px_24px_rgba(0,0,0,0.5)] lg:drop-shadow-none">
             Never too early.
             <br />
             Never too late.
           </h1>
 
-          <p className="mt-8 max-w-xl text-lg sm:text-xl text-white/80 leading-relaxed">
+          <p className="mt-8 max-w-xl text-lg sm:text-xl text-white/85 leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.6)] lg:drop-shadow-none">
             Boxing, strength &amp; conditioning, and personal training for
             kids 7+ and adults 40+ who refuse to slow down.
           </p>
@@ -76,7 +84,7 @@ export function Hero() {
             </a>
             <a
               href={site.secondaryCta.href}
-              className="inline-flex items-center justify-center rounded-full border border-white/20 bg-brand-dark/40 backdrop-blur px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10 hover:border-white/30 transition-colors"
+              className="inline-flex items-center justify-center rounded-full border border-white/30 bg-brand-dark/40 backdrop-blur px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10 hover:border-white/40 transition-colors"
             >
               {site.secondaryCta.label}
             </a>
@@ -85,7 +93,7 @@ export function Hero() {
       </div>
 
       {/* Authority strip */}
-      <div className="relative border-t border-white/10 bg-black/40 backdrop-blur-sm">
+      <div className="relative border-t border-white/10 bg-black/60 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
           <dl className="grid grid-cols-3 gap-6 text-center sm:text-left">
             {site.proofPoints.map((point) => (
@@ -93,7 +101,7 @@ export function Hero() {
                 <dt className="font-display text-3xl sm:text-4xl text-white tracking-tight">
                   {point.value}
                 </dt>
-                <dd className="mt-1 sm:mt-0 text-[11px] sm:text-xs font-medium uppercase tracking-[0.15em] text-white/55">
+                <dd className="mt-1 sm:mt-0 text-[11px] sm:text-xs font-medium uppercase tracking-[0.15em] text-white/65">
                   {point.label}
                 </dd>
               </div>
