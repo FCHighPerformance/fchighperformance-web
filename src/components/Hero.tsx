@@ -15,16 +15,15 @@ export function Hero() {
           fill
           priority
           sizes="(min-width: 1024px) 50vw, 0vw"
-          className="object-cover"
-          style={{ objectPosition: "50% 15%" }}
+          className="object-cover object-center"
         />
-        {/* Cinematic gradient blend from dark (left) to image (right edge) */}
+        {/* Softer gradient blend from dark on left fading toward the photo */}
         <div
           aria-hidden
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(90deg, rgba(35,35,35,1) 0%, rgba(35,35,35,0.85) 20%, rgba(35,35,35,0.55) 45%, rgba(35,35,35,0.2) 75%, rgba(35,35,35,0.4) 100%)",
+              "linear-gradient(90deg, rgba(35,35,35,0.95) 0%, rgba(35,35,35,0.7) 22%, rgba(35,35,35,0.3) 55%, rgba(35,35,35,0.05) 85%, transparent 100%)",
           }}
         />
       </div>
