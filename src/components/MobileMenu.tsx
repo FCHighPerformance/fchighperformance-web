@@ -17,6 +17,7 @@ const exploreLinks = [
   { label: "Our Method", href: "/our-method" },
   { label: "About Coach", href: "/about" },
   { label: "Success Stories", href: "/stories" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function MobileMenu() {

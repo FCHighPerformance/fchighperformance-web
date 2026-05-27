@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Our Method", href: "/our-method" },
   { label: "About", href: "/about" },
   { label: "Stories", href: "/stories" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function Header() {
