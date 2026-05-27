@@ -39,4 +39,11 @@ export const testimonials: Testimonial[] = [
     program: "1-on-1 Training",
     avatar: "/testimonial-tony.jpg", // PLACEHOLDER
   },
+  {
+    quote:
+      "Tried every group fitness class in the area. This is the first one where the coach actually knows my name, knows my body, and adjusts the workout when my knee acts up. Four of us, one coach, real attention. I'm 52 and lifting heavier than I did in my 30s.",
+    name: "Renee Hendricks",
+    program: "Small Group Personal Training",
+    avatar: "/testimonial-renee.jpg", // PLACEHOLDER
+  },
 ];
