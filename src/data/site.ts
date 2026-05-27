@@ -7,21 +7,19 @@ export const site = {
   url: "https://fchighperformance.com",
   phone: "757.778.9222",
   phoneHref: "tel:+17577789222",
-  email: "info@fchighperformance.com", // TODO: confirm with owner
-  emailHref: "mailto:info@fchighperformance.com",
+  email: "keith@fchighperformance.com",
+  emailHref: "mailto:keith@fchighperformance.com",
 
-  // TODO with owner: confirm exact address + lat/lng for map embed and schema
   address: {
-    street: "TODO: Street Address",
-    city: "TODO: City",
-    region: "VA", // Virginia inferred from 757 area code
-    postalCode: "TODO",
+    street: "235 Jersey Ave",
+    city: "Virginia Beach",
+    region: "VA",
+    postalCode: "23462",
     country: "US",
-    formatted: "TODO: confirm address with owner",
-    // Lat/lng power the embedded map. Defaults to a Virginia Beach centroid
-    // until the owner confirms — change these to the real address.
-    lat: 36.8529,
-    lng: -75.9779,
+    formatted: "235 Jersey Ave\nVirginia Beach, VA 23462",
+    // Real geocoded coordinates (Kempsville Heights, Virginia Beach)
+    lat: 36.8430082,
+    lng: -76.1562824,
   },
 
   primaryCta: {
@@ -41,7 +39,7 @@ export const site = {
   ],
 
   social: {
-    // TODO with owner — drop in real handles
+    // TODO with owner: drop in real handles
     instagram: "",
     facebook: "",
   },
