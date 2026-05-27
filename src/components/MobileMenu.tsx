@@ -77,7 +77,7 @@ export function MobileMenu() {
       >
         <div className="flex flex-col h-full overflow-y-auto">
           {/* Top bar */}
-          <div className="flex items-center justify-between h-20 px-4 border-b border-white/5 flex-shrink-0">
+          <div className="flex items-center justify-between h-24 px-4 border-b border-white/5 flex-shrink-0">
             <Link
               href="/"
               onClick={() => setOpen(false)}
@@ -86,9 +86,9 @@ export function MobileMenu() {
               <Image
                 src="/logo.png"
                 alt={`${site.name} logo`}
-                width={56}
-                height={56}
-                className="h-11 w-11 object-contain"
+                width={96}
+                height={96}
+                className="h-16 w-16 object-contain"
               />
               <span className="sr-only">{site.name}</span>
             </Link>

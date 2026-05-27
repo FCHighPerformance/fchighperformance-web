@@ -32,17 +32,17 @@ export function Header() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between gap-3">
+        <div className="flex h-24 items-center justify-between gap-3">
           <div className="flex items-center gap-2 min-w-0">
             <MobileMenu />
             <Link href="/" className="flex items-center gap-3 min-w-0">
               <Image
                 src="/logo.png"
                 alt={`${site.name} logo`}
-                width={56}
-                height={56}
+                width={96}
+                height={96}
                 priority
-                className="h-11 w-11 object-contain flex-shrink-0"
+                className="h-16 w-16 object-contain flex-shrink-0"
               />
               <span className="sr-only">{site.name}</span>
             </Link>
