@@ -40,3 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 public/_originals/
+FC_Website_Handoff.docx
+*.docx
